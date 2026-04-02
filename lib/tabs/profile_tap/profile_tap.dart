@@ -10,12 +10,12 @@ class ProfileTap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height =MediaQuery.of(context).size.height;
+    var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color(0xffF4F7FF),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.only(top: height*0.06),
+          padding: EdgeInsets.only(top: height * 0.06),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,41 +25,54 @@ class ProfileTap extends StatelessWidget {
                 backgroundImage: AssetImage("assets/images/rout_logo.png"),
               ),
               Padding(
-                padding:  EdgeInsets.only(top: height*0.02,bottom: height*0.006),
-                child: Text("Abdelrahman Ayman",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20),),
+                padding: EdgeInsets.only(
+                  top: height * 0.02,
+                  bottom: height * 0.006,
+                ),
+                child: Text(
+                  "Abdelrahman Ayman",
+                  style: Theme.of(context).textTheme.bodyLarge
+                ),
               ),
-              Text("abdelrahmanayman.route@gmail.com",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: Color(0xff686868)),),
+              Text(
+                "abdelrahmanayman.route@gmail.com",
+                style: Theme.of(context).textTheme.bodySmall
+              ),
               Padding(
-                padding:  EdgeInsets.only(top: height*0.05),
+                padding: EdgeInsets.only(top: height * 0.05),
                 child: Column(
                   spacing: 16,
                   children: [
                     Model_profile(
                       icon: Icons.arrow_forward_ios_sharp,
-                      function:themeshow ,
+                      function: themeshow,
                       label: AppLocalizations.of(context)!.theme,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                     Model_profile(
                       icon: Icons.arrow_forward_ios_sharp,
                       function: showLanguageBottomSheet,
                       label: AppLocalizations.of(context)!.language,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                     Model_profile(
                       icon: Icons.arrow_forward_ios_sharp,
                       function: showLanguageBottomSheet,
-                      label: AppLocalizations.of(context)!.language,
+                      label: AppLocalizations.of(context)!.logout,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                   ],
                 ),
               ),
-
             ],
           ),
         ),
       ),
     );
   }
-void themeshow(BuildContext){}
+
+  void themeshow(BuildContext) {}
+
   void showLanguageBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -67,5 +80,3 @@ void themeshow(BuildContext){}
     );
   }
 }
-
-

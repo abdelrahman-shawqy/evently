@@ -11,8 +11,8 @@ class LanguageBottomSheet extends StatelessWidget {
       body:Column(
         spacing: 3,
         children: [
-          TextButton(onPressed: (){}, child: Text(AppLocalizations.of(context)!.english)),
-          TextButton(onPressed: (){}, child: Text(AppLocalizations.of(context)!.arabic))
+          TextButton(onPressed: (){}, child: Text(AppLocalizations.of(context)!.english,style: Theme.of(context).textTheme.bodyMedium,)),
+          TextButton(onPressed: (){}, child: Text(AppLocalizations.of(context)!.arabic,style: Theme.of(context).textTheme.bodyMedium))
         ],
       )
     );

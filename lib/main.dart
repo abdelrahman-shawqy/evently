@@ -1,3 +1,4 @@
+import 'package:evently/core/my_theme.dart';
 import 'package:evently/tabs/home_tab.dart';
 import 'package:evently/tabs/profile_tap/profile_tap.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale("en"),
-      //theme:ThemeData() ,
-      //darkTheme: ,
-      //themeMode: ThemeMode.light,
+      locale: Locale("ar"),
+      theme:MyThemeData.lightTheme ,
+      darkTheme:MyThemeData.darkTheme ,
+      themeMode: ThemeMode.dark,
       initialRoute: ProfileTap.routName,
       routes: {
         Homescreen.routName:(context)=>Homescreen(),

@@ -2,5 +2,6 @@
 "language":"Language",
 "english":"English",
 "arabic":"Arabic",
-"theme":"Dark mode"
+"theme":"Dark mode",
+"logout":"Logout"
 }

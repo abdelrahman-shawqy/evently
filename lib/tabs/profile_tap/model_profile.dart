@@ -9,13 +9,14 @@ class Model_profile extends StatelessWidget {
     required this.function,
     required this.label,
     required this.icon,
+    required this.color
   });
 
   final void Function(BuildContext) function;
 
   final String label;
-
   final IconData icon;
+  final Color color ;
 
   @override
   Widget build(BuildContext context) {
@@ -24,22 +25,22 @@ class Model_profile extends StatelessWidget {
       child: Container(
         height: 48,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Color(0xffF0F0F0), width: 1),
+          border: Border.all(color:Theme.of(context).colorScheme.secondary, width: 1),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(label, style: TextStyle(color: Colors.black, fontSize: 24)),
+              Text(label, style: Theme.of(context).textTheme.bodyMedium),
               IconButton(
                 onPressed: () {
                   //showLanguageBottomSheet(context);
                   function(context);
                 },
-                icon: Icon(icon, size: 28),
+                icon: Icon(icon, size: 28,color: color),
               ),
             ],
           ),
