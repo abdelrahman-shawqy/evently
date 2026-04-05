@@ -12,7 +12,7 @@ class ProfileTap extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Theme.of(context).colorScheme.onSecondary,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(top: height * 0.06),

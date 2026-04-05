@@ -32,9 +32,9 @@ class Model_profile extends StatelessWidget {
       child: Container(
         height: 48,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondary,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color:Theme.of(context).colorScheme.secondary, width: 1),
+          border: Border.all(color:Theme.of(context).colorScheme.onError, width: 1),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -50,7 +50,7 @@ class Model_profile extends StatelessWidget {
                 },
                 icon: Icon(icon, size: 28,color: color),
               ):Switch(
-                activeColor: Theme.of(context).colorScheme.onSurface,
+                activeColor: Theme.of(context).colorScheme.primary,
                 inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey.shade400,
                 value:themeProvider.isDarkMode ,
