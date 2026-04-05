@@ -1,15 +1,19 @@
+import 'package:evently/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../language/language_bottom_sheet.dart';
 
 class Model_profile extends StatelessWidget {
-  const Model_profile({
+   Model_profile({
     super.key,
     required this.function,
     required this.label,
     required this.icon,
-    required this.color
+    required this.color,
+    required this.isIcon,
+
   });
 
   final void Function(BuildContext) function;
@@ -17,9 +21,12 @@ class Model_profile extends StatelessWidget {
   final String label;
   final IconData icon;
   final Color color ;
+  final bool isIcon;
 
   @override
   Widget build(BuildContext context) {
+    var themeProvider=context.watch<ThemeProvider>();
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
@@ -35,20 +42,31 @@ class Model_profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(label, style: Theme.of(context).textTheme.bodyMedium),
-              IconButton(
+
+              isIcon==true?IconButton(
                 onPressed: () {
                   //showLanguageBottomSheet(context);
                   function(context);
                 },
                 icon: Icon(icon, size: 28,color: color),
-              ),
-            ],
+              ):Switch(
+                activeColor: Theme.of(context).colorScheme.onSurface,
+                inactiveThumbColor: Colors.white,
+                inactiveTrackColor: Colors.grey.shade400,
+                value:themeProvider.isDarkMode ,
+                onChanged: (value) {
+                  context.read<ThemeProvider>().changeTheme(value);
+                }
+                  ),
+            ]
           ),
         ),
       ),
     );
   }
 }
+
+
 /*void showLanguageBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,

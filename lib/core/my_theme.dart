@@ -27,8 +27,9 @@ class MyThemeData {
       error: Color(0xffFF3232),
       onError: Color(0xff1C1C1C),
       surface: Color(0xffF4F7FF),
-      onSurface: Color(0xffF4F7FF),
+      onSurface: Color(0xffE9EAEB),
       outline: Color(0xff686868),
+
 
 
     ),
@@ -59,7 +60,7 @@ class MyThemeData {
       error: Color(0xffFF3232),
       onError: Color(0xffFFFFFF),
       surface: Color(0xff000F30),
-      onSurface: Color(0xffF4F7FF),
+      onSurface: Color(0xff457AED),
       outline: Color(0xff686868)
     ),
   );

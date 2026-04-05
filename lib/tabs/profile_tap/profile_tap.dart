@@ -44,18 +44,21 @@ class ProfileTap extends StatelessWidget {
                   spacing: 16,
                   children: [
                     Model_profile(
+                      isIcon: false,
                       icon: Icons.arrow_forward_ios_sharp,
                       function: themeshow,
                       label: AppLocalizations.of(context)!.theme,
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     Model_profile(
+                      isIcon: true,
                       icon: Icons.arrow_forward_ios_sharp,
                       function: showLanguageBottomSheet,
                       label: AppLocalizations.of(context)!.language,
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     Model_profile(
+                      isIcon: true,
                       icon: Icons.arrow_forward_ios_sharp,
                       function: showLanguageBottomSheet,
                       label: AppLocalizations.of(context)!.logout,
