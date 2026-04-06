@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../core/appImage.dart';
 import '../../l10n/app_localizations.dart';
 import '../language/language_bottom_sheet.dart';
 import 'model_profile.dart';
@@ -22,7 +23,7 @@ class ProfileTap extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 100,
-                backgroundImage: AssetImage("assets/images/rout_logo.png"),
+                backgroundImage: AssetImage(Appimage.profileImage),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -59,10 +60,10 @@ class ProfileTap extends StatelessWidget {
                     ),
                     Model_profile(
                       isIcon: true,
-                      icon: Icons.arrow_forward_ios_sharp,
+                      icon: Icons.logout,
                       function: showLanguageBottomSheet,
                       label: AppLocalizations.of(context)!.logout,
-                      color: Theme.of(context).colorScheme.primary,
+                      color: Theme.of(context).colorScheme.error,
                     ),
                   ],
                 ),

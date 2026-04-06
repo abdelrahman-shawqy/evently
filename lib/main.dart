@@ -1,7 +1,9 @@
 import 'package:evently/core/my_theme.dart';
 import 'package:evently/providers/language_app_provider.dart';
 import 'package:evently/providers/theme_provider.dart';
-import 'package:evently/tabs/home_tab.dart';
+import 'package:evently/tabs/favorite_tab/favorite_tab.dart';
+import 'package:evently/tabs/homeScreen/homeTab.dart';
+import 'package:evently/tabs/homeScreen/home_Screen.dart';
 import 'package:evently/tabs/profile_tap/profile_tap.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -36,11 +38,12 @@ class MyApp extends StatelessWidget {
       theme:MyThemeData.lightTheme ,
       darkTheme:MyThemeData.darkTheme ,
       themeMode: themeProvider.themeMode,
-      initialRoute: ProfileTap.routName,
+      initialRoute: HomeScreen.routName,
       routes: {
-        Homescreen.routName:(context)=>Homescreen(),
+        HomeScreen.routName:(context)=>HomeScreen(),
         ProfileTap.routName:(context)=>ProfileTap(),
-
+        FavoriteTab.routeName:(context)=>FavoriteTab(),
+        Hometab.routeName:(context)=>Hometab(),
       },
     );
   }

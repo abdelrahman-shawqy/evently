@@ -3,5 +3,8 @@
 "english":"English",
 "arabic":"Arabic",
 "theme":"Dark mode",
-"logout":"Logout"
+"logout":"Logout",
+"home":"Home",
+"favorite":"Favorite",
+"profile":"Profile"
 }

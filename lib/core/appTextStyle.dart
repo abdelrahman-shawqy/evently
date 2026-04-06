@@ -29,4 +29,20 @@ class Apptextstyle {
     fontSize: 16,color: AppColor.maintextDark,
   );
 
+  static TextStyle r1212Selected = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 12,color: AppColor.MainColor,
+  );
+  static TextStyle r1212SelectedDark = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 12,color: AppColor.MainColorDark,
+  );
+  static TextStyle r1212UnSelected = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 12,color: AppColor.disable,
+  );
+  static TextStyle r1212UnSelectedDark = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 12,color: AppColor.disableDark,
+  );
 }

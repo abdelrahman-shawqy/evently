@@ -24,12 +24,20 @@ class MyThemeData {
 
 
       onSurface: Colors.black,
-
-
-
-
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedLabelStyle:Apptextstyle.r1212Selected ,
+      unselectedLabelStyle:Apptextstyle.r1212UnSelected ,
+      //selectedItemColor:AppColor.MainColor,
+      //unselectedItemColor: AppColor.disable,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColor.MainColor,
+      shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(50)),
     ),
   );
+
+
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     appBarTheme: AppBarTheme(centerTitle: true,),
@@ -53,5 +61,17 @@ class MyThemeData {
 
       onSurface: Colors.black,
     ),
+
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedLabelStyle:Apptextstyle.r1212SelectedDark ,
+      unselectedLabelStyle:Apptextstyle.r1212UnSelectedDark ,
+      selectedItemColor:AppColor.MainColorDark,
+      unselectedItemColor: AppColor.disableDark,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColor.MainColorDark,
+      shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(50)),
+    ),
+
   );
 }
