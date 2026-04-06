@@ -29,6 +29,7 @@ class Apptextstyle {
     fontSize: 16,color: AppColor.maintextDark,
   );
 
+
   static TextStyle r1212Selected = GoogleFonts.poppins(
     fontWeight: FontWeight.w400,
     fontSize: 12,color: AppColor.MainColor,

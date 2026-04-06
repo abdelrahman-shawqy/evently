@@ -21,10 +21,8 @@ class MyThemeData {
       error: AppColor.red,
       onError:AppColor.stroke,
       surface: AppColor.inputs,
-
-
       onSurface: Colors.black,
-    ),
+      ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedLabelStyle:Apptextstyle.r1212Selected ,
       unselectedLabelStyle:Apptextstyle.r1212UnSelected ,
