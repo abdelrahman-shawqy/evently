@@ -31,4 +31,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profile => 'Profile';
+
+  @override
+  String get welcome => 'Welcome Back ✨';
+
+  @override
+  String get enIconHomeTab => 'EN';
 }

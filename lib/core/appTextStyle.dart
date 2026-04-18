@@ -46,4 +46,27 @@ class Apptextstyle {
     fontWeight: FontWeight.w400,
     fontSize: 12,color: AppColor.disableDark,
   );
+
+  static TextStyle m2020 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 20,color: AppColor.maintext,
+  );
+  static TextStyle m2020Dark = GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 20,color: AppColor.maintextDark,
+  );
+
+  static TextStyle sBOld1414 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 14,color: AppColor.maintextDark,
+  );
+  static TextStyle sBOld1414Dark = GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 14,color: AppColor.maintextDark,
+  );
+
+  static TextStyle m1616White =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,color: AppColor.inputs,
+  );
 }

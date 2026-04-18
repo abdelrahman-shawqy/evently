@@ -25,4 +25,6 @@ class AppColor {
   static Color red  =Color(0xffFF3232);
   static Color redDark  =Color(0xffFF3232);
 
+
+
 }

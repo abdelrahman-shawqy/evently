@@ -9,4 +9,9 @@ class ThemeProvider extends ChangeNotifier{
     themeMode=isDark?ThemeMode.dark:ThemeMode.light;
     notifyListeners();
   }
+  changeThemeHome(ThemeMode mode){
+
+    themeMode = mode ;
+    notifyListeners();
+  }
 }

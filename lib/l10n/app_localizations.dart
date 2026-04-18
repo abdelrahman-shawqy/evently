@@ -145,6 +145,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profile'**
   String get profile;
+
+  /// No description provided for @welcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome Back ✨'**
+  String get welcome;
+
+  /// No description provided for @enIconHomeTab.
+  ///
+  /// In en, this message translates to:
+  /// **'EN'**
+  String get enIconHomeTab;
 }
 
 class _AppLocalizationsDelegate

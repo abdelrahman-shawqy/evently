@@ -11,6 +11,12 @@ class MyThemeData {
       bodyLarge: Apptextstyle.sBOld2020,
       bodyMedium:Apptextstyle.m1616,
       bodySmall: Apptextstyle.r1414,
+      displayLarge: Apptextstyle.m2020,
+      displaySmall: Apptextstyle.sBOld1414,
+
+
+      displayMedium: Apptextstyle.m1616White,
+
     ),
     colorScheme: ColorScheme(
       brightness: Brightness.light,
@@ -44,6 +50,10 @@ class MyThemeData {
       bodyLarge: Apptextstyle.sBOld2020Dark,
       bodyMedium:Apptextstyle.m1616Dark,
       bodySmall: Apptextstyle.r1414Dark,
+      displayLarge: Apptextstyle.m2020Dark,
+      displaySmall: Apptextstyle.sBOld1414Dark,
+
+      displayMedium: Apptextstyle.m1616White,
     ),
 
     colorScheme: ColorScheme(

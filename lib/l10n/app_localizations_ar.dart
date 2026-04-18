@@ -31,4 +31,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get profile => 'الحساب';
+
+  @override
+  String get welcome => 'مرحبًا بعودتك ✨';
+
+  @override
+  String get enIconHomeTab => 'AR';
 }
