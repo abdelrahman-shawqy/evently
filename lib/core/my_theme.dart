@@ -13,6 +13,9 @@ class MyThemeData {
       bodySmall: Apptextstyle.r1414,
       displayLarge: Apptextstyle.m2020,
       displaySmall: Apptextstyle.sBOld1414,
+      headlineLarge: Apptextstyle.sBold1616,
+      headlineMedium: Apptextstyle.m1414,
+
 
 
       displayMedium: Apptextstyle.m1616White,
@@ -52,6 +55,8 @@ class MyThemeData {
       bodySmall: Apptextstyle.r1414Dark,
       displayLarge: Apptextstyle.m2020Dark,
       displaySmall: Apptextstyle.sBOld1414Dark,
+      headlineLarge: Apptextstyle.sBold1616Dark,
+      headlineMedium: Apptextstyle.m1414Dark,
 
       displayMedium: Apptextstyle.m1616White,
     ),

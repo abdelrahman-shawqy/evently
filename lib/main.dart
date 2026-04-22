@@ -4,10 +4,12 @@ import 'package:evently/providers/theme_provider.dart';
 import 'package:evently/tabs/favorite_tab/favorite_tab.dart';
 import 'package:evently/tabs/homeScreen/homeTab.dart';
 import 'package:evently/tabs/homeScreen/home_Screen.dart';
+import 'package:evently/tabs/homeScreen/home_Screen.dart';
 import 'package:evently/tabs/profile_tap/profile_tap.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'l10n/app_localizations.dart';
+import 'whatsApp/whatsApp.dart';
 
 void main() {
   runApp( MultiProvider(
@@ -40,6 +42,7 @@ class MyApp extends StatelessWidget {
       themeMode: themeProvider.themeMode,
       initialRoute: HomeScreen.routName,
       routes: {
+        WhatsAppChatScreen.routName:(context)=>WhatsAppChatScreen(),
         HomeScreen.routName:(context)=>HomeScreen(),
         ProfileTap.routName:(context)=>ProfileTap(),
         FavoriteTab.routeName:(context)=>FavoriteTab(),

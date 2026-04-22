@@ -37,4 +37,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get enIconHomeTab => 'EN';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get birthday => 'Birthday';
+
+  @override
+  String get book_Club => 'Book Club';
+
+  @override
+  String get exhibition => 'Exhibition';
+
+  @override
+  String get meeting => 'Meeting';
+
+  @override
+  String get sport => 'Sport';
+
+  @override
+  String get searchForEvent => 'Search for event';
+
+  @override
+  String get notFound => 'Not Found';
 }

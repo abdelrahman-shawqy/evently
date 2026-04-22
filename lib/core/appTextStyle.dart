@@ -69,4 +69,24 @@ class Apptextstyle {
     fontWeight: FontWeight.w500,
     fontSize: 16,color: AppColor.inputs,
   );
+
+  static TextStyle sBold1616 =GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,color: AppColor.MainColor,
+  );
+  static TextStyle sBold1616Dark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,color: AppColor.MainColorDark,
+  );
+
+  static TextStyle m1414 =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,color: AppColor.maintext,
+  );
+  static TextStyle m1414Dark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,color: AppColor.maintextDark,
+  );
+
+
 }

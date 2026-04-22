@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/appImage.dart';
+import '../../items/itemsEvents/itemEvent.dart';
 import '../../providers/language_app_provider.dart';
 import '../../providers/providerHomeChips.dart';
 import '../../providers/theme_provider.dart';
@@ -29,6 +30,14 @@ class Hometab extends StatelessWidget {
       create: (context)=>Providerhomechips(),
       builder: (context,child){
         var providerChip=context.watch<Providerhomechips>();
+        chips=[AppLocalizations.of(context)!.all,
+          AppLocalizations.of(context)!.birthday,
+          AppLocalizations.of(context)!.book_Club,
+          AppLocalizations.of(context)!.exhibition,
+          AppLocalizations.of(context)!.meeting,
+          AppLocalizations.of(context)!.sport,
+        ];
+
 
         return  SafeArea(
           child: Scaffold(
@@ -39,6 +48,7 @@ class Hometab extends StatelessWidget {
               body: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -106,6 +116,17 @@ class Hometab extends StatelessWidget {
                         selectedIndex:providerChip.selectedIndex ,
 
                       ),
+                    ),
+
+
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 16),                        child: ListView.separated(
+                          separatorBuilder:(context,index)=>SizedBox(height:16 ,) ,
+                          itemCount:20 ,
+                          itemBuilder: (context,index)=>Itemevent(),
+                        ),
+                      ),
                     )
                   ],
                 ),
@@ -118,12 +139,7 @@ class Hometab extends StatelessWidget {
   }
 
   List <String> chips = [
-    "All",
-    "Birthday",
-    "Book Club",
-    "Exhibition",
-    "Meeting",
-    "Sport"
+
   ];
 
 

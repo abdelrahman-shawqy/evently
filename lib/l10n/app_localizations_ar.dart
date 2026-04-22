@@ -37,4 +37,28 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get enIconHomeTab => 'AR';
+
+  @override
+  String get all => 'الكل';
+
+  @override
+  String get birthday => 'عيد ميلاد';
+
+  @override
+  String get book_Club => 'نادي الكتاب';
+
+  @override
+  String get exhibition => 'معرض';
+
+  @override
+  String get meeting => 'اجتماع';
+
+  @override
+  String get sport => 'رياضة';
+
+  @override
+  String get searchForEvent => 'البحث عن الحدث';
+
+  @override
+  String get notFound => 'غير موجود';
 }

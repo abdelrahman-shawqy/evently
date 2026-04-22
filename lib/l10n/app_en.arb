@@ -8,5 +8,13 @@
 "favorite":"Favorite",
 "profile":"Profile",
 "welcome":"Welcome Back ✨",
-"enIconHomeTab":"EN"
+"enIconHomeTab":"EN",
+"all":"All",
+"birthday":"Birthday",
+"book_Club":"Book Club",
+"exhibition":"Exhibition",
+"meeting":"Meeting",
+"sport":"Sport",
+"searchForEvent":"Search for event",
+"notFound":"Not Found"
 }

@@ -8,5 +8,13 @@
 "favorite":"المفضلة",
 "profile":"الحساب",
 "welcome":"مرحبًا بعودتك ✨",
-"enIconHomeTab":"AR"
+"enIconHomeTab":"AR",
+"all":"الكل",
+"birthday":"عيد ميلاد",
+"book_Club":"نادي الكتاب",
+"exhibition":"معرض",
+"meeting":"اجتماع",
+"sport":"رياضة",
+"searchForEvent":"البحث عن الحدث",
+"notFound":"غير موجود"
 }

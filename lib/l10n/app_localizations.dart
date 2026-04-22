@@ -157,6 +157,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'EN'**
   String get enIconHomeTab;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// No description provided for @birthday.
+  ///
+  /// In en, this message translates to:
+  /// **'Birthday'**
+  String get birthday;
+
+  /// No description provided for @book_Club.
+  ///
+  /// In en, this message translates to:
+  /// **'Book Club'**
+  String get book_Club;
+
+  /// No description provided for @exhibition.
+  ///
+  /// In en, this message translates to:
+  /// **'Exhibition'**
+  String get exhibition;
+
+  /// No description provided for @meeting.
+  ///
+  /// In en, this message translates to:
+  /// **'Meeting'**
+  String get meeting;
+
+  /// No description provided for @sport.
+  ///
+  /// In en, this message translates to:
+  /// **'Sport'**
+  String get sport;
+
+  /// No description provided for @searchForEvent.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for event'**
+  String get searchForEvent;
+
+  /// No description provided for @notFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Found'**
+  String get notFound;
 }
 
 class _AppLocalizationsDelegate
