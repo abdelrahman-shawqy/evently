@@ -16,5 +16,16 @@
 "meeting":"Meeting",
 "sport":"Sport",
 "searchForEvent":"Search for event",
-"notFound":"Not Found"
+"notFound":"Not Found",
+"addEvent":"Add event",
+"title":"Title",
+"description":"Description",
+"eventTitle":"Event Title",
+"eventDescription":"Event Description....",
+"eventDate":"Event Date",
+"eventTime":"Event Time",
+"chooseDate":"Choose date",
+"chooseTime":"Choose time",
+"loginToYourAccount":"Login to your account",
+"enterYourEmail":"Enter your email"
 }

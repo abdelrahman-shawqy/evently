@@ -2,11 +2,12 @@ import 'package:evently/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../tabs/homeTap/homeTab.dart';
+import '../add_event_screen/addEventScreen.dart';
 import '../../core/appImage.dart';
 import '../../providers/home_provider.dart';
-import '../favorite_tab/favorite_tab.dart';
-import '../profile_tap/profile_tap.dart';
-import 'homeTab.dart';
+import '../../tabs/favorite_tab/favorite_tab.dart';
+import '../../tabs/profile_tap/profile_tap.dart';
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});
@@ -23,7 +24,9 @@ class HomeScreen extends StatelessWidget {
 
           body: tabs[homeprovider.selectedIndex],
           floatingActionButton: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(AddEventScreen.routName);
+            },
             child: Icon(Icons.add, color: Colors.white),
           ),
           bottomNavigationBar: BottomNavigationBar(

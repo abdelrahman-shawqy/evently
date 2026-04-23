@@ -56,6 +56,7 @@ class Apptextstyle {
     fontSize: 20,color: AppColor.maintextDark,
   );
 
+
   static TextStyle sBOld1414 = GoogleFonts.poppins(
     fontWeight: FontWeight.w600,
     fontSize: 14,color: AppColor.maintextDark,
@@ -88,5 +89,36 @@ class Apptextstyle {
     fontSize: 14,color: AppColor.maintextDark,
   );
 
+  static TextStyle m1818 =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 18,color: AppColor.maintext,
+  );
+  static TextStyle m1818Dark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 18,color: AppColor.maintextDark,
+  );
 
+  static TextStyle r1414add =GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,color: AppColor.MainColor,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColor.MainColor,
+  );
+  static TextStyle r1414addDark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,color: AppColor.MainColorDark,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColor.MainColorDark,
+  );
+
+  static TextStyle sBold2424 =GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 24,
+    color: Color(0xff0E3A99),
+  );
+  static TextStyle sBold2424Dark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 24,
+    color: Colors.white,
+  );
 }

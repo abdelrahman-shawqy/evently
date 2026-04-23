@@ -15,6 +15,9 @@ class MyThemeData {
       displaySmall: Apptextstyle.sBOld1414,
       headlineLarge: Apptextstyle.sBold1616,
       headlineMedium: Apptextstyle.m1414,
+      headlineSmall: Apptextstyle.m1818,
+      labelLarge: Apptextstyle.r1414add,
+      labelMedium: Apptextstyle.sBold2424,
 
 
 
@@ -57,6 +60,12 @@ class MyThemeData {
       displaySmall: Apptextstyle.sBOld1414Dark,
       headlineLarge: Apptextstyle.sBold1616Dark,
       headlineMedium: Apptextstyle.m1414Dark,
+      headlineSmall: Apptextstyle.m1818Dark,
+      labelLarge: Apptextstyle.r1414addDark,
+      labelMedium: Apptextstyle.sBold2424Dark,
+
+
+
 
       displayMedium: Apptextstyle.m1616White,
     ),

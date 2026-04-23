@@ -2,12 +2,13 @@ import 'package:evently/core/my_theme.dart';
 import 'package:evently/providers/language_app_provider.dart';
 import 'package:evently/providers/theme_provider.dart';
 import 'package:evently/tabs/favorite_tab/favorite_tab.dart';
-import 'package:evently/tabs/homeScreen/homeTab.dart';
-import 'package:evently/tabs/homeScreen/home_Screen.dart';
-import 'package:evently/tabs/homeScreen/home_Screen.dart';
+import 'package:evently/Screens/homeScreen/home_Screen.dart';
+import 'package:evently/tabs/homeTap/homeTab.dart';
 import 'package:evently/tabs/profile_tap/profile_tap.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'Screens/add_event_screen/addEventScreen.dart';
+import 'Screens/loginScreen/loginScreen.dart';
 import 'l10n/app_localizations.dart';
 import 'whatsApp/whatsApp.dart';
 
@@ -40,13 +41,15 @@ class MyApp extends StatelessWidget {
       theme:MyThemeData.lightTheme ,
       darkTheme:MyThemeData.darkTheme ,
       themeMode: themeProvider.themeMode,
-      initialRoute: HomeScreen.routName,
+      initialRoute: LoginScreen.routName,
       routes: {
         WhatsAppChatScreen.routName:(context)=>WhatsAppChatScreen(),
         HomeScreen.routName:(context)=>HomeScreen(),
         ProfileTap.routName:(context)=>ProfileTap(),
         FavoriteTab.routeName:(context)=>FavoriteTab(),
         Hometab.routeName:(context)=>Hometab(),
+        AddEventScreen.routName:(context)=>AddEventScreen(),
+        LoginScreen.routName:(context)=>LoginScreen(),
       },
     );
   }

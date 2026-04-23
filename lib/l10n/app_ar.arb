@@ -16,5 +16,21 @@
 "meeting":"اجتماع",
 "sport":"رياضة",
 "searchForEvent":"البحث عن الحدث",
-"notFound":"غير موجود"
+"notFound":"غير موجود",
+"addEvent":"أضف حدثًا",
+"title":"عنوان",
+"description":"وصف",
+"eventTitle":"عنوان الحدث",
+"eventDescription":"وصف الحدث...",
+"eventDate":"تاريخ الحدث",
+"chooseDate":"اختار الوقت",
+"chooseTime":"اختار الوقت",
+"addEvent":"اضافة حدث",
+"loginToYourAccount":"تسجيل الدخول إلى حسابك",
+"enterYourEmail":"أدخل بريدك الإلكتروني"
+
+
+
+
+
 }

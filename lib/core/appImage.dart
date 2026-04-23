@@ -18,4 +18,8 @@ class Appimage {
   static const String birthday="assets/images/Birthday.png";
   static const String birthdayDark="assets/images/BirthdayDark.png";
   static const String searchNormal="assets/images/searchNormal.png";
+  static const String calendar ="assets/images/calendar-add.png";
+  static const String clock ="assets/images/clock.png";
+  static const String eventlyLogo ="assets/images/eventlyLogo.png";
+  static const String eventlyLogoDark ="assets/images/eventlyLogoDark.png";
 }

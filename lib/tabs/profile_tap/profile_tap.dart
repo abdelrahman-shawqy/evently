@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../core/appImage.dart';
+import '../../items/language/language_bottom_sheet.dart';
 import '../../l10n/app_localizations.dart';
-import '../language/language_bottom_sheet.dart';
 import 'model_profile.dart';
 
 class ProfileTap extends StatelessWidget {

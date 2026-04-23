@@ -205,6 +205,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Not Found'**
   String get notFound;
+
+  /// No description provided for @addEvent.
+  ///
+  /// In en, this message translates to:
+  /// **'Add event'**
+  String get addEvent;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @eventTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Title'**
+  String get eventTitle;
+
+  /// No description provided for @eventDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Description....'**
+  String get eventDescription;
+
+  /// No description provided for @eventDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Date'**
+  String get eventDate;
+
+  /// No description provided for @eventTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Time'**
+  String get eventTime;
+
+  /// No description provided for @chooseDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose date'**
+  String get chooseDate;
+
+  /// No description provided for @chooseTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose time'**
+  String get chooseTime;
+
+  /// No description provided for @loginToYourAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Login to your account'**
+  String get loginToYourAccount;
+
+  /// No description provided for @enterYourEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email'**
+  String get enterYourEmail;
 }
 
 class _AppLocalizationsDelegate

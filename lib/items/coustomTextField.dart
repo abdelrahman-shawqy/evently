@@ -6,29 +6,50 @@ import 'package:provider/provider.dart';
 import '../core/appImage.dart';
 
 class Coustomtextfield extends StatelessWidget {
-  Coustomtextfield ({super.key});
-
+  Coustomtextfield ({super.key,required this.hintText,required this.hasLable,required this.maxLines});
+  bool hasLable;
+  String hintText;
+  int maxLines;
   @override
   Widget build(BuildContext context) {
     //var themeProvider=context.watch<ThemeProvider>()
-    return  SafeArea(
-      child: TextField(
-        style: Theme.of(context).textTheme.headlineMedium,
-      decoration: InputDecoration(
+    return ifHasLable(hasLable,context);
+  }
 
-        hintText: AppLocalizations.of(context)!.searchForEvent,
+  Widget ifHasLable(bool hasLable, BuildContext context){
+    return hasLable? TextField(
+      maxLines: maxLines,
+      style: Theme.of(context).textTheme.headlineMedium,
+      decoration: InputDecoration(
+        hintText:hintText ,
+
         //errorText: AppLocalizations.of(context)!.notFound,
         filled: true,
         fillColor: Theme.of(context).colorScheme.surface,
-      hintStyle: Theme.of(context).textTheme.bodySmall,
-       // prefixIcon: Icon(Icons.person),
+        hintStyle: Theme.of(context).textTheme.bodySmall,
+        // prefixIcon: Icon(Icons.person),
         suffixIcon: ImageIcon(AssetImage(Appimage.searchNormal),color:Theme.of(context).colorScheme.primary,),
-      enabledBorder: buildOutlineInputBorder(context),
+        enabledBorder: buildOutlineInputBorder(context),
         focusedBorder: buildOutlineInputBorder(context),
         errorBorder: buildOutlineInputBorder(context),
         focusedErrorBorder: buildOutlineInputBorder(context),
       ),
-    ),);
+    ):TextField(
+      style: Theme.of(context).textTheme.headlineMedium,
+      decoration: InputDecoration(
+        //hintText:hintText ,
+        //errorText: AppLocalizations.of(context)!.notFound,
+        filled: true,
+        fillColor: Theme.of(context).colorScheme.surface,
+        hintStyle: Theme.of(context).textTheme.bodySmall,
+        // prefixIcon: Icon(Icons.person),
+        suffixIcon: ImageIcon(AssetImage(Appimage.searchNormal),color:Theme.of(context).colorScheme.primary,),
+        enabledBorder: buildOutlineInputBorder(context),
+        focusedBorder: buildOutlineInputBorder(context),
+        errorBorder: buildOutlineInputBorder(context),
+        focusedErrorBorder: buildOutlineInputBorder(context),
+      ),
+    );
   }
   OutlineInputBorder buildOutlineInputBorder(BuildContext context){
     return OutlineInputBorder(
