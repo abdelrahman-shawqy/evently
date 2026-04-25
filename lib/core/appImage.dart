@@ -22,4 +22,8 @@ class Appimage {
   static const String clock ="assets/images/clock.png";
   static const String eventlyLogo ="assets/images/eventlyLogo.png";
   static const String eventlyLogoDark ="assets/images/eventlyLogoDark.png";
+  static const String eye_slash ="assets/images/eye_slash.png";
+  static const String sms ="assets/images/sms.png";
+  static const String lock ="assets/images/lock.png";
+  static const String google ="assets/images/google.png";
 }

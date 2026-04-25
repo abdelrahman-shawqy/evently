@@ -94,4 +94,25 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get enterYourEmail => 'أدخل بريدك الإلكتروني';
+
+  @override
+  String get enterYourPassword => 'أدخل كلمة المرور الخاصة بك';
+
+  @override
+  String get forgetPassword => 'نسيت كلمة المرور؟';
+
+  @override
+  String get login => 'تسجيل الدخول';
+
+  @override
+  String get dontHaveAnAccount => 'ليس لديك حساب؟';
+
+  @override
+  String get signup => 'اشتراك';
+
+  @override
+  String get or => 'او';
+
+  @override
+  String get loginWithgoogle => 'تسجيل الدخول مع جوجل';
 }

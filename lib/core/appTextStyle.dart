@@ -49,12 +49,9 @@ class Apptextstyle {
 
   static TextStyle m2020 = GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
-    fontSize: 20,color: AppColor.maintext,
+    fontSize: 20,color: Colors.white,
   );
-  static TextStyle m2020Dark = GoogleFonts.poppins(
-    fontWeight: FontWeight.w500,
-    fontSize: 20,color: AppColor.maintextDark,
-  );
+
 
 
   static TextStyle sBOld1414 = GoogleFonts.poppins(
@@ -120,5 +117,29 @@ class Apptextstyle {
     fontWeight: FontWeight.w600,
     fontSize: 24,
     color: Colors.white,
+  );
+
+  static TextStyle sBold1414 =GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: AppColor.MainColor,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColor.MainColor,
+  );
+  static TextStyle sBold1414Dark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: AppColor.MainColor,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColor.MainColorDark,
+  );
+
+  static TextStyle m1818Login =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 18,color: AppColor.MainColor,
+  );
+  static TextStyle m1818LoginDark =GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 18,color: AppColor.MainColorDark,
   );
 }

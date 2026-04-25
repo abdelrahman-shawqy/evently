@@ -94,4 +94,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get enterYourEmail => 'Enter your email';
+
+  @override
+  String get enterYourPassword => 'Enter your password';
+
+  @override
+  String get forgetPassword => 'Forget Password?';
+
+  @override
+  String get login => 'Login';
+
+  @override
+  String get dontHaveAnAccount => 'Don’t have an account ?';
+
+  @override
+  String get signup => 'Signup';
+
+  @override
+  String get or => 'OR';
+
+  @override
+  String get loginWithgoogle => 'Login with Google';
 }

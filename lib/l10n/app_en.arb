@@ -27,5 +27,12 @@
 "chooseDate":"Choose date",
 "chooseTime":"Choose time",
 "loginToYourAccount":"Login to your account",
-"enterYourEmail":"Enter your email"
+"enterYourEmail":"Enter your email",
+"enterYourPassword":"Enter your password",
+"forgetPassword":"Forget Password?",
+"login":"Login",
+"dontHaveAnAccount":"Don’t have an account ?",
+"signup":"Signup",
+"or":"OR",
+"loginWithgoogle":"Login with Google"
 }

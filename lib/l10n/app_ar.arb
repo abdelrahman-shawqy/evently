@@ -27,7 +27,20 @@
 "chooseTime":"اختار الوقت",
 "addEvent":"اضافة حدث",
 "loginToYourAccount":"تسجيل الدخول إلى حسابك",
-"enterYourEmail":"أدخل بريدك الإلكتروني"
+"enterYourEmail":"أدخل بريدك الإلكتروني",
+"enterYourPassword":"أدخل كلمة المرور الخاصة بك",
+"forgetPassword":"نسيت كلمة المرور؟",
+"login":"تسجيل الدخول",
+"dontHaveAnAccount":"ليس لديك حساب؟",
+"signup":"اشتراك",
+"or":"او",
+"loginWithgoogle":"تسجيل الدخول مع جوجل"
+
+
+
+
+
+
 
 
 

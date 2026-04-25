@@ -5,14 +5,21 @@ import 'package:evently/tabs/favorite_tab/favorite_tab.dart';
 import 'package:evently/Screens/homeScreen/home_Screen.dart';
 import 'package:evently/tabs/homeTap/homeTab.dart';
 import 'package:evently/tabs/profile_tap/profile_tap.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Screens/add_event_screen/addEventScreen.dart';
 import 'Screens/loginScreen/loginScreen.dart';
+import 'firebase_options.dart';
 import 'l10n/app_localizations.dart';
 import 'whatsApp/whatsApp.dart';
 
-void main() {
+void main() async{
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp( MultiProvider(
     providers:[
       ChangeNotifierProvider(

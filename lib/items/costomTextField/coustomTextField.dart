@@ -3,7 +3,7 @@ import 'package:evently/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../core/appImage.dart';
+import '../../core/appImage.dart';
 
 class Coustomtextfield extends StatelessWidget {
   Coustomtextfield ({super.key,required this.hintText,required this.hasLable,required this.maxLines});
