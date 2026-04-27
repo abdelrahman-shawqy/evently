@@ -281,7 +281,7 @@ abstract class AppLocalizations {
   /// No description provided for @forgetPassword.
   ///
   /// In en, this message translates to:
-  /// **'Forget Password?'**
+  /// **'Forget Password'**
   String get forgetPassword;
 
   /// No description provided for @login.
@@ -313,6 +313,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Login with Google'**
   String get loginWithgoogle;
+
+  /// No description provided for @createYourAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your account'**
+  String get createYourAccount;
+
+  /// No description provided for @enterYourName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your name'**
+  String get enterYourName;
+
+  /// No description provided for @confirmYourPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm your password'**
+  String get confirmYourPassword;
+
+  /// No description provided for @alreadyHaveAnAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alreadyHaveAnAccount;
+
+  /// No description provided for @signUpWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with Google'**
+  String get signUpWithGoogle;
+
+  /// No description provided for @resetPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset password'**
+  String get resetPassword;
 }
 
 class _AppLocalizationsDelegate

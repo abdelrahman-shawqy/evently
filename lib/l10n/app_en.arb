@@ -34,5 +34,12 @@
 "dontHaveAnAccount":"Don’t have an account ?",
 "signup":"Signup",
 "or":"OR",
-"loginWithgoogle":"Login with Google"
+"loginWithgoogle":"Login with Google",
+"createYourAccount":"Create your account",
+"enterYourName":"Enter your name",
+"confirmYourPassword":"Confirm your password",
+"alreadyHaveAnAccount":"Already have an account?",
+"signUpWithGoogle":"Sign up with Google",
+"forgetPassword":"Forget Password",
+"resetPassword":"Reset password"
 }

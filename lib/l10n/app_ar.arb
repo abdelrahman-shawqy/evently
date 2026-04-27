@@ -34,7 +34,20 @@
 "dontHaveAnAccount":"ليس لديك حساب؟",
 "signup":"اشتراك",
 "or":"او",
-"loginWithgoogle":"تسجيل الدخول مع جوجل"
+"loginWithgoogle":"تسجيل الدخول مع جوجل",
+"createYourAccount":"أنشئ حسابك",
+"enterYourName":"ادخل اسمك",
+"confirmYourPassword":"قم بتأكيد كلمة المرور",
+"alreadyHaveAnAccount":"لديك حساب بالفعل?",
+"signUpWithGoogle":"قم بالتسجيل مع جوجل",
+"forgetPassword":"نسيت كلمة المرور",
+"resetPassword":"إعادة تعيين كلمة المرور"
+
+
+
+
+
+
 
 
 

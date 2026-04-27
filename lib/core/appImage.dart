@@ -26,4 +26,6 @@ class Appimage {
   static const String sms ="assets/images/sms.png";
   static const String lock ="assets/images/lock.png";
   static const String google ="assets/images/google.png";
+  static const String changeSetting ="assets/images/change-settingDark.png";
+  static const String changeSettingDark ="assets/images/change-setting.png";
 }

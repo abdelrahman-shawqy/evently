@@ -99,7 +99,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get enterYourPassword => 'أدخل كلمة المرور الخاصة بك';
 
   @override
-  String get forgetPassword => 'نسيت كلمة المرور؟';
+  String get forgetPassword => 'نسيت كلمة المرور';
 
   @override
   String get login => 'تسجيل الدخول';
@@ -115,4 +115,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get loginWithgoogle => 'تسجيل الدخول مع جوجل';
+
+  @override
+  String get createYourAccount => 'أنشئ حسابك';
+
+  @override
+  String get enterYourName => 'ادخل اسمك';
+
+  @override
+  String get confirmYourPassword => 'قم بتأكيد كلمة المرور';
+
+  @override
+  String get alreadyHaveAnAccount => 'لديك حساب بالفعل?';
+
+  @override
+  String get signUpWithGoogle => 'قم بالتسجيل مع جوجل';
+
+  @override
+  String get resetPassword => 'إعادة تعيين كلمة المرور';
 }

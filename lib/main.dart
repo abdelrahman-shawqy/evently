@@ -9,13 +9,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Screens/add_event_screen/addEventScreen.dart';
+import 'Screens/loginScreen/Forget_Password.dart';
 import 'Screens/loginScreen/loginScreen.dart';
+import 'Screens/loginScreen/registerScreen.dart';
 import 'firebase_options.dart';
 import 'l10n/app_localizations.dart';
 import 'whatsApp/whatsApp.dart';
 
 void main() async{
-
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -57,6 +59,8 @@ class MyApp extends StatelessWidget {
         Hometab.routeName:(context)=>Hometab(),
         AddEventScreen.routName:(context)=>AddEventScreen(),
         LoginScreen.routName:(context)=>LoginScreen(),
+        RegisterScreen.routeName:(context)=>RegisterScreen(),
+        ForgetPassword.routeName:(context)=>ForgetPassword(),
       },
     );
   }

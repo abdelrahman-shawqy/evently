@@ -99,7 +99,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enterYourPassword => 'Enter your password';
 
   @override
-  String get forgetPassword => 'Forget Password?';
+  String get forgetPassword => 'Forget Password';
 
   @override
   String get login => 'Login';
@@ -115,4 +115,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginWithgoogle => 'Login with Google';
+
+  @override
+  String get createYourAccount => 'Create your account';
+
+  @override
+  String get enterYourName => 'Enter your name';
+
+  @override
+  String get confirmYourPassword => 'Confirm your password';
+
+  @override
+  String get alreadyHaveAnAccount => 'Already have an account?';
+
+  @override
+  String get signUpWithGoogle => 'Sign up with Google';
+
+  @override
+  String get resetPassword => 'Reset password';
 }

@@ -1,24 +1,26 @@
-import 'package:evently/Screens/loginScreen/registerScreen.dart';
-import 'package:evently/core/appImage.dart';
-import 'package:evently/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../core/appImage.dart';
 import '../../items/costomTextField/textFieldLogin.dart';
 import '../../items/loginIcon.dart';
 import '../../l10n/app_localizations.dart';
-import 'Forget_Password.dart';
+import '../../providers/theme_provider.dart';
+import 'loginScreen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
- static const String routName="LoginScreen";
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
+  static const String routeName="RegisterScreen";
+
   @override
   Widget build(BuildContext context) {
     var themeProvuder = context.watch<ThemeProvider>();
-    return  SafeArea(
+
+    return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 90,
+          automaticallyImplyLeading: false,
           title: Image.asset(ThemeMode.light==themeProvuder.themeMode?Appimage.eventlyLogo:Appimage.eventlyLogoDark),
         ),
         body: Padding(
@@ -26,39 +28,40 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(AppLocalizations.of(context)!.loginToYourAccount,style: Theme.of(context).textTheme.labelMedium,
+              Text(AppLocalizations.of(context)!.createYourAccount,style: Theme.of(context).textTheme.labelMedium,
               ),
 
               Padding(
                 padding: const EdgeInsets.only(bottom: 47,top: 24),
                 child: Column(
+                  spacing: 16,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
+                    Textfieldlogin(
+                      hintText: AppLocalizations.of(context)!.enterYourName,
+                      prefixIcon: Appimage.profileIconTab,
+                    ),
+
                     Textfieldlogin(
                       hintText: AppLocalizations.of(context)!.enterYourEmail,
                       prefixIcon: Appimage.sms,
                     ),
-
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16,bottom: 8),
-                      child: Textfieldlogin(
-                        hintText: AppLocalizations.of(context)!.enterYourPassword,
-                        prefixIcon: Appimage.lock,
-                        suffixIcon: Appimage.eye_slash,
-                      ),
+                    Textfieldlogin(
+                      hintText: AppLocalizations.of(context)!.enterYourPassword,
+                      prefixIcon: Appimage.lock,
+                      suffixIcon: Appimage.eye_slash,
                     ),
-                    TextButton(
-                      onPressed: (){
-                        Navigator.pushNamed(context, ForgetPassword.routeName);
-                      },
-                      child: Text(AppLocalizations.of(context)!.forgetPassword,style: Theme.of(context).textTheme.labelSmall,),
+                    Textfieldlogin(
+                      hintText: AppLocalizations.of(context)!.confirmYourPassword,
+                      prefixIcon: Appimage.lock,
+                      suffixIcon: Appimage.eye_slash,
                     ),
 
                   ],
                 ),
               ),
               Loginicon(
-                text: AppLocalizations.of(context)!.login,
+                text: AppLocalizations.of(context)!.signup,
               ),
 
               Padding(
@@ -66,13 +69,14 @@ class LoginScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(AppLocalizations.of(context)!.dontHaveAnAccount,style: Theme.of(context).textTheme.bodySmall,),
-                    TextButton(
-                      onPressed: (){
-                        Navigator.pushNamed(context, RegisterScreen.routeName);
-                      },
-                        child: Text(AppLocalizations.of(context)!.signup,style: Theme.of(context).textTheme.labelSmall,),
-                    ),],
+                    Text(AppLocalizations.of(context)!.alreadyHaveAnAccount,style: Theme.of(context).textTheme.bodySmall,),
+        TextButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          child: Text(AppLocalizations.of(context)!.login,style: Theme.of(context).textTheme.labelSmall,),
+        ),
+                  ],
                 ),
               ),
 
@@ -85,7 +89,7 @@ class LoginScreen extends StatelessWidget {
 
                       thickness: 2,           // سمك الخط
                       height: 20,             // المسافة حواليه
-                     // indent: 20,             // بداية من الشمال
+                      // indent: 20,             // بداية من الشمال
                       endIndent: 16,          // نهاية من اليمين
                     ),
                   ),
@@ -97,13 +101,12 @@ class LoginScreen extends StatelessWidget {
                       thickness: 2,           // سمك الخط
                       height: 20,             // المسافة حواليه
                       indent: 16,             // بداية من الشمال
-                     // endIndent: 20,          // نهاية من اليمين
+                      // endIndent: 20,          // نهاية من اليمين
                     ),
                   ),
 
                 ],
               ),
-
               SizedBox(
                 height: 24,
               ),
@@ -122,7 +125,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       width: 16,
                     ),
-                    Text(AppLocalizations.of(context)!.loginWithgoogle,style:Theme.of(context).textTheme.titleLarge),
+                    Text(AppLocalizations.of(context)!.signUpWithGoogle,style:Theme.of(context).textTheme.titleLarge),
                   ],
                 ),
               )
