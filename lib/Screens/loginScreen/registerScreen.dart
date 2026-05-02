@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../Firebase/fireBase_functions.dart';
 import '../../core/appImage.dart';
 import '../../items/costomTextField/textFieldLogin.dart';
 import '../../items/loginIcon.dart';
@@ -15,6 +16,9 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var themeProvuder = context.watch<ThemeProvider>();
+    var emailControler = TextEditingController();
+    var passwordControler = TextEditingController();
+    var nameControler = TextEditingController();
 
     return SafeArea(
       child: Scaffold(
@@ -40,28 +44,57 @@ class RegisterScreen extends StatelessWidget {
                     Textfieldlogin(
                       hintText: AppLocalizations.of(context)!.enterYourName,
                       prefixIcon: Appimage.profileIconTab,
+                      controller: nameControler,
                     ),
 
                     Textfieldlogin(
                       hintText: AppLocalizations.of(context)!.enterYourEmail,
                       prefixIcon: Appimage.sms,
+                      controller: emailControler,
                     ),
                     Textfieldlogin(
                       hintText: AppLocalizations.of(context)!.enterYourPassword,
                       prefixIcon: Appimage.lock,
                       suffixIcon: Appimage.eye_slash,
+                      controller: passwordControler,
                     ),
                     Textfieldlogin(
                       hintText: AppLocalizations.of(context)!.confirmYourPassword,
                       prefixIcon: Appimage.lock,
                       suffixIcon: Appimage.eye_slash,
+                      //controller: passwordControler,
                     ),
 
                   ],
                 ),
               ),
-              Loginicon(
-                text: AppLocalizations.of(context)!.signup,
+              InkWell(
+                onTap: (){
+                  FirebaseFunctions.creatNewUser(
+                    email: emailControler.text,
+                    password:passwordControler.text ,
+                    name:nameControler.text ,
+
+                   onSuccess:(){
+                     Navigator.pop(context);
+                   } ,
+                    onError: (message){
+                      if (!FirebaseFunctions.isValidEmail(emailControler.text)) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Invalid email format\n Please enter a valid email")),
+                        );
+                        return;
+                      }
+                     ScaffoldMessenger.of(context).showSnackBar(
+                         SnackBar(content: Text(message)));
+                    },
+
+
+                  );
+                },
+                child: Loginicon(
+                  text: AppLocalizations.of(context)!.signup,
+                ),
               ),
 
               Padding(
