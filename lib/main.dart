@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
       theme:MyThemeData.lightTheme ,
       darkTheme:MyThemeData.darkTheme ,
       themeMode: themeProvider.themeMode,
-      initialRoute: LoginScreen.routName,
+      initialRoute: HomeScreen.routName,
       routes: {
         WhatsAppChatScreen.routName:(context)=>WhatsAppChatScreen(),
         HomeScreen.routName:(context)=>HomeScreen(),

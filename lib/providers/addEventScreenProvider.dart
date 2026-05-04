@@ -9,4 +9,6 @@ class AddEventScreenProvider extends ChangeNotifier{
     selectedIndex=currentIndex;
     notifyListeners();
   }
+
+
 }

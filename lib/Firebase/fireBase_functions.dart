@@ -1,46 +1,57 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseFunctions {
-  //String email;
-  static Future<void> creatNewUser({
+
+  creatTaskes(){
+    FirebaseFirestore.instance.collection("tasks").
+    add
+  }
+
+  static Future<String?> creatNewUser({
     required String email,
     required String password,
     required String name,
-    required Function onSuccess,
-    required Function onError,
+   // required Function onSuccess,
+    //required Function onError,
   }) async {
     try {
       final credential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
       //add to DB
-      onSuccess();
-    } on FirebaseAuthException catch (e) {
-      onError(e.message);
-      print("${e.message}");
-    } catch (e) {
-      onError("Something Went Wrong");
-      print(e);
+     // onSuccess();
+      await credential.user!.sendEmailVerification();
+
+      return null ;
+    }
+    on FirebaseAuthException catch (e) {
+      //onError(e.message);
+      return e.message?? "Register failed" ;
+
     }
   }
 
-  static Future<void> signIn(String email, String password) async {
+  static Future<String?> signIn(String email, String password) async {
     try {
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
+
+      if (credential.user != null && !credential.user!.emailVerified) {
+        return "Please verify your email first";
+      }
+
+      return null;
       //add to DB
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        print('No user found for that email.');
-      } else if (e.code == 'wrong-password') {
-        print('Wrong password provided for that user.');
-      }
+      return e.message ?? "Login failed";
     }
   }
 
   static bool isValidEmail(String email) {
-    return RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
+    return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
         .hasMatch(email);
   }
+
 }
