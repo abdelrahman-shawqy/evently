@@ -45,7 +45,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get birthday => 'عيد ميلاد';
 
   @override
-  String get book_Club => 'نادي الكتاب';
+  String get bookClub => 'نادي الكتاب';
 
   @override
   String get exhibition => 'معرض';

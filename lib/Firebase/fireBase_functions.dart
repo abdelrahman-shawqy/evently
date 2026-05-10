@@ -1,12 +1,52 @@
+import 'dart:ffi';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../models/task_model.dart';
+
 class FirebaseFunctions {
 
-  creatTaskes(){
-    FirebaseFirestore.instance.collection("tasks").
-    add
+
+  static CollectionReference <TaskModel> getTasksColloction(){
+     return FirebaseFirestore.instance.collection("tasks")
+         .withConverter<TaskModel>(
+       fromFirestore: (snapshot,_){
+         return TaskModel.fromJson(snapshot.data()!);
+       },
+       toFirestore: (value,_){
+         return value.toJson();
+       },
+     );
+   }
+
+  static Future<void>creatTaskes(TaskModel task){
+     var collection= getTasksColloction();
+     var doc=collection.doc();
+     task.id=doc.id;
+     return doc.set(task);
   }
+
+  static Future<QuerySnapshot<TaskModel>> getTasks()async{
+    var colliction=getTasksColloction();
+    return await colliction.get();
+  }
+
+  static Stream<QuerySnapshot<TaskModel>> getStreamTasks({String? categorys}){
+    var colliction=getTasksColloction();
+    if(categorys != null){
+      return colliction.where("category",isEqualTo: categorys).snapshots();
+    }
+    return  colliction.snapshots();
+  }
+
+  static Future<void>updateTask(TaskModel task){
+    var collection =getTasksColloction();
+    return collection.doc(task.id).update(task.toJson());
+
+  }
+
+
 
   static Future<String?> creatNewUser({
     required String email,

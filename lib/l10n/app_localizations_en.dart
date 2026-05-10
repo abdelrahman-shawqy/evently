@@ -45,7 +45,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get birthday => 'Birthday';
 
   @override
-  String get book_Club => 'Book Club';
+  String get bookClub => 'BookClub';
 
   @override
   String get exhibition => 'Exhibition';

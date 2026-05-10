@@ -170,11 +170,11 @@ abstract class AppLocalizations {
   /// **'Birthday'**
   String get birthday;
 
-  /// No description provided for @book_Club.
+  /// No description provided for @bookClub.
   ///
   /// In en, this message translates to:
-  /// **'Book Club'**
-  String get book_Club;
+  /// **'BookClub'**
+  String get bookClub;
 
   /// No description provided for @exhibition.
   ///

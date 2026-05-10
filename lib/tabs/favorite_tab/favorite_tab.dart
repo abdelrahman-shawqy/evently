@@ -26,7 +26,12 @@ class FavoriteTab extends StatelessWidget {
                 child: ListView.separated(
                   separatorBuilder:(context,index)=>SizedBox(height:16 ,) ,
                   itemCount:20 ,
-                  itemBuilder: (context,index)=>Itemevent(),
+                  itemBuilder: (context,index)=>Itemevent(
+                    //date: "",
+                    category: "",
+                    descrebtion:"" ,
+
+                  ),
                 ),
               )
             ],
