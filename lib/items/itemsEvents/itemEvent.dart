@@ -102,13 +102,20 @@ class Itemevent extends StatelessWidget {
                                 ).textTheme.headlineMedium,
                               ),
                               InkWell(
-
-                                child:Image.asset(
+                                onTap: () {
+                                  providerWatch.changeFavoriteIcon();
+                                },
+                                child:providerWatch.isSelectedFavorite?Image.asset(
                               Appimage.favoriteIconTab,
                               height: 17.8,
                               width: 20,
 
-                                ),
+                                ):Image.asset(
+                                'assets/images/selectedHeart.png',
+                                height: 17.8,
+                                width: 20,
+
+                              )
                               ),
                             ],
                           ),

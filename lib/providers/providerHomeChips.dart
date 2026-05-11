@@ -9,7 +9,7 @@ class Providerhomechips extends ChangeNotifier {
   Providerhomechips({this.category});
   List<String>?category;
   int selectedIndex = 0;
-  late StreamSubscription streamSubscription;
+   StreamSubscription? streamSubscription;
 
   changeSelectedIndex(int index) {
     selectedIndex = index;
@@ -18,11 +18,11 @@ class Providerhomechips extends ChangeNotifier {
   }
   @override
   dispose(){
-    streamSubscription.cancel();
+    streamSubscription!.cancel();
     super.dispose();
   }
   getStreamTaskes() {
-    if(streamSubscription!=null )streamSubscription.cancel();
+    if(streamSubscription!=null )streamSubscription!.cancel();
     streamSubscription = FirebaseFunctions.getStreamTasks(
       categorys: selectedIndex == 0 ? null : category![selectedIndex],
     ).listen((event) {
@@ -48,6 +48,11 @@ class Providerhomechips extends ChangeNotifier {
       print("erorr ${e.toString()}");
     }
     isLoading = false;
+    notifyListeners();
+  }
+  bool isSelectedFavorite=true;
+  changeFavoriteIcon(){
+    isSelectedFavorite=!isSelectedFavorite;
     notifyListeners();
   }
 }

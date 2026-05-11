@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:evently/core/my_theme.dart';
 import 'package:evently/providers/language_app_provider.dart';
 import 'package:evently/providers/theme_provider.dart';
@@ -21,6 +22,7 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseFirestore.instance.disableNetwork();
 
   runApp( MultiProvider(
     providers:[
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
       theme:MyThemeData.lightTheme ,
       darkTheme:MyThemeData.darkTheme ,
       themeMode: themeProvider.themeMode,
-      initialRoute: HomeScreen.routName,
+      initialRoute: LoginScreen.routName,
       routes: {
         WhatsAppChatScreen.routName:(context)=>WhatsAppChatScreen(),
         HomeScreen.routName:(context)=>HomeScreen(),

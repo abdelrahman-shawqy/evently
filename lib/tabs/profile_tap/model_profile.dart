@@ -54,7 +54,7 @@ class Model_profile extends StatelessWidget {
                 inactiveTrackColor: Colors.grey.shade400,
                 value:themeProvider.isDarkMode ,
                 onChanged: (value) {
-                  context.read<ThemeProvider>().changeTheme(value);
+                  context.read<ThemeProvider>().changeTheme(!value);
                 }
                   ),
             ]

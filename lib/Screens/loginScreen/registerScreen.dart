@@ -1,3 +1,5 @@
+import 'package:evently/models/userModel.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -121,7 +123,9 @@ class RegisterScreen extends StatelessWidget {
                           password:passwordControler.text ,
                           name:nameControler.text ,
                         );
+
                         if(error==null){
+
                           Navigator.pushNamedAndRemoveUntil(
                               context,
                               HomeScreen.routName,
